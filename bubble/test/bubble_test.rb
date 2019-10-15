@@ -8,6 +8,7 @@ class BubbleTest < MiniTest::Test
     @sort1 = BubbleSort.new([6,5,4,3,2,1])
     @sort2 = BubbleSort.new([3,5,2,7,1])
     @sort3 = BubbleSort.new([9,6,4,2,1])
+    @sort4 = BubbleSort.new(['a','c','d','b'])
   end
 
   def test_existence
@@ -19,5 +20,6 @@ class BubbleTest < MiniTest::Test
     assert_equal [1,2,3,4,5,6], @sort1.sort
     assert_equal [1,2,3,5,7], @sort2.sort
     assert_equal [1,2,4,6,9], @sort3.sort
+    assert_equal ['a','b','c','d'], @sort4.sort
   end
 end
